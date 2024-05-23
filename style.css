@@ -1,0 +1,424 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: monospace;
+  font-size: 1.125rem;
+  color: #6f737f;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main_img {
+  width: 100%;
+}
+
+section {
+  padding: 4em 0;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ---------------------Nav--------------------- */
+
+.main__header {
+  background-color: #2e323f;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.logo img {
+  margin-top: 0.2em;
+}
+
+.nav {
+  width: 100%;
+}
+
+.nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+.toggle__nav {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  height: 3em;
+  width: 3em;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #3b4050;
+  transition: opacity 200ms ease-in;
+  position: absolute;
+  left: 0;
+}
+
+.toggle__nav:focus,
+.toggle__nav:hover {
+  opacity: 0.75;
+}
+
+.ham,
+.ham::before,
+.ham::after {
+  background-color: white;
+  display: block;
+  height: 3px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.ham::after,
+.ham::before {
+  content: "";
+  width: 100%;
+}
+
+.ham::after {
+  transform: translateY(3px);
+}
+
+.ham::before {
+  transform: translateY(-6px);
+}
+
+.list_items {
+  margin: 0;
+  padding: 0;
+}
+.list_item {
+  list-style: none;
+  text-align: center;
+}
+
+.list_item + .list_item {
+  margin-top: 0.6em;
+}
+
+.list_link {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.list_link--btn {
+  cursor: pointer;
+  background-color: #fff;
+  color: #3b4050;
+  padding: 0.6em 1em;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+
+.list_item-one {
+  margin-bottom: 1.2em;
+}
+
+li:hover,
+li:focus {
+  transition: opacity 300ms ease-in-out;
+  opacity: 0.6;
+  color: white;
+  text-decoration: underline;
+}
+
+/* ---------------------Hero--------------------- */
+
+.hero {
+  background-color: #3b4050;
+}
+
+.hero__title {
+  color: white;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.hero__title--span {
+  color: #a59678;
+}
+
+.hero__content {
+  font-size: 1.125rem;
+  color: #fff;
+}
+.hero__content--cta {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  font-size: 0.9rem;
+  background-color: #a59678;
+  padding: 0.5em 0.8em;
+  border-radius: 50px;
+  display: inline-block;
+  margin-top: 1.5em;
+}
+.hero__content--cta:focus,
+.hero__content--cta:hover {
+  transition: background-color 500ms ease-in;
+  color: #a59678;
+  background-color: white;
+}
+
+/* ---------------------Section_2--------------------- */
+
+.two {
+  background-color: rgb(246, 246, 246);
+}
+.two__text {
+  text-align: center;
+}
+.two__text + .two__text {
+  margin-top: 2em;
+}
+.two__text--title {
+  color: #a59678;
+  font-size: 1.5rem;
+}
+.two__text--content {
+  font-size: 1.125rem;
+}
+
+/* ---------------------Section_3--------------------- */
+
+.three__one--title {
+  color: #a59678;
+  font-size: 1.7rem;
+}
+
+.three__one--content {
+  font-size: 1.125rem;
+}
+
+.three__two {
+  color: #fff;
+  text-align: center;
+  padding: 0.5em 0.8em;
+  background-color: #3b4050;
+}
+.three__two + .three__two {
+  margin-top: 2em;
+}
+
+.three__two--title {
+  font-size: 1.5rem;
+}
+
+.three__two--content {
+  font-size: 1.125rem;
+}
+
+/* ---------------------Section_4--------------------- */
+
+.four {
+  background-color: #3b4050;
+}
+.four__one {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.four__two--title {
+  color: #a59678;
+  font-size: 1.3125rem;
+}
+
+.four__two-a--content {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.four__two-lists {
+  list-style: none;
+}
+
+.four__two-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.four__two-div + .four__two-div {
+  margin-top: 2em;
+}
+
+/* ---------------------MediaQ_700px_&_More--------------------- */
+
+@media (min-width: 700px) {
+  .container {
+    padding: 0 3em;
+  }
+  .toggle__nav {
+    margin-left: 3em;
+  }
+  .row_mid {
+    display: flex;
+    justify-content: space-between;
+  }
+  .three__two {
+    width: 32%;
+  }
+  .three__two + .three__two {
+    margin-top: 0;
+  }
+
+  .hero__title {
+    font-size: 5.625rem;
+    line-height: 1.1;
+    margin-bottom: 0;
+  }
+  .hero__content {
+    font-size: 1.5rem;
+  }
+  .hero__content--cta {
+    font-size: 1.5rem;
+  }
+  .two__text--title,
+  .three__two--title {
+    font-size: 1.875rem;
+  }
+  .three__one--title {
+    font-size: 2.25rem;
+  }
+  .three__one--content {
+    font-size: 1.3125rem;
+  }
+  .four__one {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .four__two--title {
+    font-size: 1.3125rem;
+  }
+  .four__two-a--content {
+    font-size: 1rem;
+  }
+  .four__two-link {
+    font-size: 1rem;
+  }
+  .row-four {
+    display: flex;
+    justify-content: space-between;
+  }
+  .four__two-div + .four__two-div {
+    margin-top: 0;
+  }
+  .four__two-a {
+    width: 40%;
+  }
+  .four__two-b,
+  .four__two-c,
+  .four__two-d {
+    width: 16%;
+    align-self: flex-start;
+  }
+  .four__two-lists {
+    padding: 0;
+  }
+  .four__two-list + .four__two-list {
+    margin-top: 1em;
+  }
+}
+
+/* ---------------------MediaQ_1000px_&_More--------------------- */
+
+@media (min-width: 1000px) {
+  .container {
+    position: static;
+    padding: 0;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .row-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 30%;
+  }
+  .toggle__nav {
+    display: none;
+  }
+  .nav {
+    visibility: visible;
+    height: auto;
+    position: relative;
+  }
+
+  .list_item-one {
+    width: 30%;
+    margin-bottom: 0;
+  }
+
+  .list_item-two {
+    width: 30%;
+  }
+  .list_item + .list_item {
+    margin-top: 0em;
+  }
+  .hero {
+    min-height: 660px;
+    display: flex;
+    align-items: center;
+  }
+  .hero__text {
+    width: 40%;
+  }
+  .hero__content {
+    align-self: flex-end;
+    width: 40%;
+  }
+
+  .two__text {
+    width: 30%;
+  }
+  .two__text + .two__text {
+    margin-top: 0;
+  }
+  .row_mid {
+    flex-direction: column;
+  }
+  .three__one {
+    width: 60%;
+  }
+  .three__two_main {
+    width: 32%;
+    align-self: flex-start;
+  }
+  .three__two {
+    width: 100%;
+  }
+  .three__two + .three__two {
+    margin-top: 2em;
+  }
+}
